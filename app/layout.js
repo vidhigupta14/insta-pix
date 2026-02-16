@@ -19,10 +19,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className="font-montserrat antialiased">
+        {/* Grid Pattern Background */}
+        <div className="fixed inset-0 pointer-events-none opacity-[0.1] bg-grid-pattern z-0" />
+        
+        <div className="relative z-10">
+          {children}
+        </div>
       </body>
     </html>
   );
