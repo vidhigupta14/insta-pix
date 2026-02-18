@@ -1,4 +1,8 @@
 @import "tailwindcss";
+:root {
+  --color-primary: #b0a1e3;
+  --color-secondary: #fff163;
+}
 
 @layer utilities {
   .bg-grid-pattern {
@@ -7,4 +11,11 @@
       linear-gradient(90deg, #B0A1E3 0.5px, transparent 0.5px);
     background-size: 24px 24px;
   }
+  .text-primary {
+    color: var(--color-primary);
+  }
+}
+
+body {
+  background-color: rgb(244, 244, 244);
 }

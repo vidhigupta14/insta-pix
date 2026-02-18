@@ -1,5 +1,27 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
+import Nav from "./components/Nav";
+import { Montserrat, Caveat, Fredoka } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-montserrat",
+});
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["700"],
+  variable: "--font-caveat",
+});
+
+const fredoka = Fredoka({
+  subsets: ["latin"],
+  weight: ["700"],
+  variable: "--font-fredoka",
+});
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,11 +41,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="font-montserrat antialiased">
+      <body className={`${montserrat.className} ${caveat.variable} ${fredoka.variable} font-montserrat antialiased`}>
         {/* Grid Pattern Background */}
         <div className="fixed inset-0 pointer-events-none opacity-[0.1] bg-grid-pattern z-0" />
         
         <div className="relative z-10">
+          <Nav />
           {children}
         </div>
       </body>
