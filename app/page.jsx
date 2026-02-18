@@ -1,3 +1,12 @@
+import LandingPolaroid from "./components/LandingPolaroid";
+import PolaroidForm from "./components/PolaroidForm";
+
 export default function Home() {
-  return <h1>HELLO WORLD</h1>;
+  return (
+    <div className="flex justify-around items-center ml-20 mr-20">
+      <LandingPolaroid />
+      <PolaroidForm />
+    </div>
+
+  )
 }

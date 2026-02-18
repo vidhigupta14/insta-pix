@@ -1,21 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Montserrat:wght@400;500;600;700&family=Caveat:wght@700&display=swap');
+
 @import "tailwindcss";
-:root {
-  --color-primary: #b0a1e3;
-  --color-secondary: #fff163;
-}
+
 
 @layer utilities {
+  .font-fredoka {
+    font-family: 'Fredoka', cursive;
+  }
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+  .font-caveat {
+    font-family: 'Caveat', cursive;
+  }
+  
   .bg-grid-pattern {
     background-image: 
-      linear-gradient(#B0A1E3 0.5px, transparent 0.5px),
-      linear-gradient(90deg, #B0A1E3 0.5px, transparent 0.5px);
+      linear-gradient(#b0a1e31a 0.5px, transparent 0.5px),
+      linear-gradient(90deg, #b0a1e317 0.5px, transparent 0.5px);
     background-size: 24px 24px;
   }
-  .text-primary {
-    color: var(--color-primary);
-  }
-}
 
-body {
-  background-color: rgb(244, 244, 244);
+  body{
+    background-color: #F5F5F5;
+  }
+
+  .bg-primary {
+    background-color: #B0A1E3;
+  }
+  
+  .border-primary {
+    border-color: #B0A1E3;
+  }
+
+  .bg-hover-primary:hover{
+    background-color: #887dd3;
+  }
+
+  .text-primary {
+    color: #B0A1E3;
+  }
+  
+  .bg-accent {
+    background-color: #f9f08e;
+  }
+
+  .border-accent {
+    border-color: #f9f08e;
+  }
+  
+  .text-accent {
+    color: #FFF163;
+  }
 }
